@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZENMATCHA | Nature-Tech Fusion 2026</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glow-bg glow-1"></div>
+    <div class="glow-bg glow-2"></div>
+    
+    <nav class="navbar">
+        <div class="logo">ZEN<strong>MATCHA</strong></div>
+        <ul class="nav-links">
+            <li><a href="#">Essence</a></li>
+            <li><a href="#">Extraction</a></li>
+            <li><a href="#">Ecosystem</a></li>
+            <li><a href="#">Connect</a></li>
+        </ul>
+        <button class="nav-btn">Pre-Order</button>
+    </nav>
+
+    <main class="hero">
+        <div class="hero-content">
+            <div class="badge">EST. 2026 // PREMIUM GRADE</div>
+            <h1>Nature-Tech<br><span class="text-gradient">Fusion</span></h1>
+            <p>Experience the ultimate clarity. Our hyper-extracted emerald matcha delivers cinematic energy wrapped in a smooth, luxurious finish. Elevate your frequency.</p>
+            <div class="cta-group">
+                <button class="btn btn-primary"><span>Initiate Sequence</span></button>
+                <button class="btn btn-secondary"><span>Discover</span></button>
+            </div>
+            
+            <div class="glass-cards">
+                <div class="glass-card">
+                    <h3>Purity Protocol</h3>
+                    <p>99.9% ceremonial grade</p>
+                </div>
+                <div class="glass-card">
+                    <h3>Neural Energy</h3>
+                    <p>Sustained alpha-wave activation</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="floating-cup-container">
+                <img src="./matcha_cup.png" alt="3D Iced Matcha Latte" class="matcha-cup">
+                
+                <!-- 3D Floating Glass Elements -->
+                <div class="floating-element glass-element-1"></div>
+                <div class="floating-element glass-element-2"></div>
+                <div class="floating-element glass-element-3"></div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Smooth interactive 3D effect on mousemove for a futuristic feel
+        document.addEventListener('mousemove', (e) => {
+            const container = document.querySelector('.floating-cup-container');
+            if(container) {
+                const x = (window.innerWidth / 2 - e.pageX) / 50;
+                const y = (window.innerHeight / 2 - e.pageY) / 50;
+                container.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+            }
+            
+            const card2 = document.querySelector('.glass-card:nth-child(2)');
+            if(card2) {
+                const cx = (window.innerWidth / 2 - e.pageX) / 100;
+                const cy = (window.innerHeight / 2 - e.pageY) / 100;
+                card2.style.transform = `translateY(-5px) rotateY(${cx}deg) rotateX(${cy}deg)`;
+            }
+        });
+    </script>
+</body>
+</html>
